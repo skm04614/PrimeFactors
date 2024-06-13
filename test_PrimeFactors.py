@@ -4,20 +4,20 @@ from PrimeFactors import prime_factors_of
 
 
 class Test(TestCase):
-    def test_prime_factors_of_1(self):
-        n = 1
+    def test_prime_factors_of_n(self):
+        n_to_expected = {
+            1: [],
+            2: [2],
+            3: [3],
+            4: [2, 2],
+            6: [2, 3],
+            9: [3, 3],
+            11: [11],
+            13: [13],
+            19: [19],
+            20: [2, 2, 5],
+            60: [2, 2, 3, 5]
+        }
 
-        expected = []
-        self.assertEqual(expected, prime_factors_of(n))
-
-    def test_prime_factors_of_2(self):
-        n = 2
-
-        expected = [2]
-        self.assertEqual(expected, prime_factors_of(n))
-
-    def test_prime_factors_of_3(self):
-        n = 3
-
-        expected = [3]
-        self.assertEqual(expected, prime_factors_of(n))
+        for n, expected in n_to_expected.items():
+            self.assertEqual(expected, prime_factors_of(n))
