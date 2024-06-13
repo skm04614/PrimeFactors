@@ -1,2 +1,2 @@
-def prime_factors(n: int) -> list[int]:
-    return []
+def prime_factors_of(n: int) -> list[int]:
+    return [1]
