@@ -1,4 +1,4 @@
-name: update readme
+name: unittest
 
 on:
   pull_request:
